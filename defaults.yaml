@@ -32,7 +32,7 @@ variables:
     \renewcommand{\textsc}[1]{\oldsc{\MakeLowercase{#1}}}
 
     \usepackage{titling}
-    \pretitle{\begin{center}\LARGE\textsc}
+    \pretitle{\begin{center}\Huge\textsc}
     \posttitle{\end{center}\vspace{2em}}
     \preauthor{\begin{center}\large}
     \postauthor{\par\end{center}}
@@ -40,12 +40,14 @@ variables:
     \postdate{\end{center} \vfill}
 
     \usepackage{titlesec,titletoc}
-    \titleformat{\section}[hang]{\normalfont\Large\itshape}{}{}{}[]
+    \titleformat{\section}[hang]{\normalfont\Large\itshape}{\thesection}{1em}{}[]
     \titleformat{\subsection}[hang]{\normalfont\large\itshape}{}{1em}{}[]
     \titleformat{\paragraph}[runin]{\normalfont\scshape}{}{0pt}{}[]
+    \titlespacing{\paragraph}{0pt}{1em}{0.5ex}
 
     \usepackage{enumitem}
     \setlist{font=\normalfont\scshape}
+    \setlist[itemize,1]{label=$›$}
 
     \usepackage{fancyhdr}
   include-before: |
