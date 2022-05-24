@@ -1,0 +1,55 @@
+from            : markdown+raw_tex
+to              : latex
+standalone      : true
+template        : "_lib/default.latex"
+file-scope      : true
+fail-if-warnings: false
+cite-method     : citeproc
+filters:
+  - citeproc
+metadata:
+  bibliography  : "cv.bib"
+  csl           : "chicago-cv.csl"
+  suppress-bibliography: true
+number-sections : false
+variables:
+  documentclass : article
+  fontsize      : 12pt
+  indent        : false
+  papersize     : a4
+  fontfamily    : ebgaramond
+  fontfamilyoptions:
+    - proportional
+    - oldstyle
+  header-includes: |
+    \usepackage{academicons}
+
+    \usepackage{multicol}
+    \setlength{\columnsep}{15pt}
+    \usepackage{csquotes}
+    \usepackage[overload]{textcase}
+    \let\oldsc\textsc
+    \renewcommand{\textsc}[1]{\oldsc{\MakeLowercase{#1}}}
+
+    \usepackage{titling}
+    \pretitle{\begin{center}\LARGE\textsc}
+    \posttitle{\end{center}\vspace{2em}}
+    \preauthor{\begin{center}\large}
+    \postauthor{\par\end{center}}
+    \predate{\begin{center}\large}
+    \postdate{\end{center} \vfill}
+
+    \usepackage{titlesec,titletoc}
+    \titleformat{\section}[hang]{\normalfont\Large\itshape}{}{}{}[]
+    \titleformat{\subsection}[hang]{\normalfont\large\itshape}{}{1em}{}[]
+    \titleformat{\paragraph}[runin]{\normalfont\scshape}{}{0pt}{}[]
+
+    \usepackage{enumitem}
+    \setlist{font=\normalfont\scshape}
+
+    \usepackage{fancyhdr}
+  include-before: |
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\itshape Pedro P. Palazzo}
+    \rhead{\thepage}
