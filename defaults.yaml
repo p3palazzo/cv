@@ -46,7 +46,7 @@ variables:
     \titlespacing{\paragraph}{0pt}{1em}{0.5ex}
 
     \usepackage{enumitem}
-    \setlist{font=\normalfont\scshape}
+    \setlist{font=\normalfont\scshape\tabularnums}
     \setlist[itemize,1]{label=$›$}
 
     \usepackage{fancyhdr}
