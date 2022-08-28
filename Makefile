@@ -1,10 +1,10 @@
-cv.pdf : cv.md defaults.yaml cv.bib
+cv.pdf : cv.md defaults.yaml cv.yaml
 	pandoc -o $@ -d defaults.yaml $<
 
-%.pdf : %.md defaults.yaml cv.bib
+%.pdf : %.md defaults.yaml cv.yaml
 	pandoc -o $@ -d defaults.yaml $<
 
-%.tex : %.md defaults.yaml cv.bib
+%.tex : %.md defaults.yaml cv.yaml
 	pandoc -o $@ -d defaults.yaml $<
 	
 .PHONY : clean
