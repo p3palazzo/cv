@@ -1,11 +1,11 @@
-cv.pdf : cv.md defaults.yaml cv.yaml
-	pandoc -o $@ -d defaults.yaml $<
+cv.pdf : cv.md _spec/defaults.yaml cv.yaml
+	pandoc -o $@ -d _spec/defaults.yaml $<
 
-%.pdf : %.md defaults.yaml cv.yaml
-	pandoc -o $@ -d defaults.yaml $<
+%.pdf : %.md _spec/defaults.yaml cv.yaml
+	pandoc -o $@ -d _spec/defaults.yaml $<
 
-%.tex : %.md defaults.yaml cv.yaml
-	pandoc -o $@ -d defaults.yaml $<
+%.tex : %.md _spec/defaults.yaml cv.yaml
+	pandoc -o $@ -d _spec/defaults.yaml $<
 	
 .PHONY : clean
 clean :
