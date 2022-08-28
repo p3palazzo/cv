@@ -1,9 +1,8 @@
 ---
 title: "Pedro P. Palazzo"
-author: 'pedro.palazzo@gmail.com · +351 914 896 380 · \@p3palazzo'
+author: 'pedro@palazzo.pt · +351 914 896 380 · \@p3palazzo'
 date: "Updated June 23^rd^, 2020"
 lang: en-GB
-layout: home
 abstract: |
   Architectural historian and preservationist specialising in the
   Beaux-Arts tradition and in vernacular building cultures of the
